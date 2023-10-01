@@ -1,0 +1,17 @@
+• Dobry pomysł z przyspieszeniem muzyki w czasie zaklęcia stworów po wzięciu P. Natomiast trochę niejasne jest, kiedy to zaklęcie się kończy. Na arcade jest osobna muzyczka i dokładnie z jej końcem trzeba zacząć uważać. Jeśli nie ma miejsca na osobny utwór to może jakiś dźwięk w tle o określonej liczbie przejść, żeby można było to sobie wyliczyć?
+
+• Pojawianie się bonusów. W wersji Arcade "B" wypada po każdych pełnych 5000 punktów. "E" nieco bardziej losowo, ale zależnie od sumy zebranych zapalonych bomb, punktów i ustawień deep switch. "S" całkiem losowo, w komputerze nie ma sensu implementować.
+
+• "P" pojawia się po wzięciu 10 zapalonych bomb lub 20 niezapalonych (albo kominacji tych sytuacji, np. 8 zapalonych i cztery niezapalone). Przydałby się mały pasek postępu do wyjścia "P". Dodatkowo w arcade są jeszcze kolory - "P" zmienia barwę od niebieskiego za 100 punktów do szarego za 2000 punktów. Kolor zmienia się po skoku lub obiciu o ścianę/platformę. Ale to pewnie trudno będzie uzyskać, więc może lepiej odpuścić.
+
+• "P" latające mogłoby też jakoś wpływać na muzykę, bo czasem się nie zauważa, że wyszło. Może "P" latające przyspieszałoby muzykę, a po wzięciu jakiś dżingiel, jak w punkcie 3?
+
+• Kolejność zbierania bomb jest odtworzona idealnie, ale pierwsza bomba jest już zapalona. W arcade pierwszą można wziąć dowolną (i potem wg schematu) i podobnie po wtopie - można zacząć od dowolnej bomby.
+
+• Skoki. Mechanika rozwiązana inaczej, ale ciekawie. Z początku trudno się przyzwyczaić, potem idzie lepiej. Może dałoby się zaimplementować, że joy w dół przyspiesza stopniowo spadanie?
+
+• Wylęganie stworów. Wygląda mi losowo. W arcade ptak pojawia się w losowym narożniku górnym, a stwory lęgną się w zależności od położenia Jacka - jak jest na prawej części ekranu to wypadają po lewej, jak jest na lewej to lęgną się po prawej. Teraz zdarza się, że pojawiają się prosto na naszym bohaterze.
+
+• Zachowanie ptaków jest nieco inne, ale ciekawe. Na arcade ptaki latają w cyklach i nie zawracają znienacka. Ale to ciekawy element rozgrywki, nie ma sensu na siłę dopasowywać - zostawiłbym jak jest.
+
+• Bonus. Jestem za naliczaniem bonusu.

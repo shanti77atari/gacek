@@ -1,0 +1,137 @@
+For C programmers:
+
+#define FRAMES (2)
+#define HEIGHT (16)
+#define GAP    (0)
+const unsigned char P0COLOURS[FRAMES] =
+{
+  0x34, 0x0e
+};
+const unsigned char P1COLOURS[FRAMES] =
+{
+  0x88, 0x88
+};
+const unsigned char P0DATA[FRAMES][HEIGHT] =
+{
+  {
+    0x00, 0x00, 0x00, 0x00, 0x18, 0x18, 0x18, 0x18, 
+    0x24, 0x66, 0x3c, 0x3c, 0x3c, 0x3c, 0x18, 0x00
+  },
+  {
+    0x00, 0x00, 0x00, 0x18, 0x00, 0x00, 0x00, 0x24, 
+    0x18, 0x00, 0x00, 0x00, 0x42, 0x42, 0x66, 0x00
+  }
+};
+const unsigned char P1DATA[FRAMES][HEIGHT] =
+{
+  {
+    0x00, 0x5a, 0x7e, 0x66, 0x24, 0x24, 0x18, 0x18,
+    0x00, 0x18, 0x42, 0x7e, 0x00, 0x00, 0x00, 0x3c
+  },
+  {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+  }
+};
+
+For BASIC programmers:
+
+10000 REM **** FRAMES ****
+10010 DATA 2
+10020 REM **** HEIGHT ****
+10030 DATA 16
+10040 REM **** GAP ****
+10050 DATA 0
+10060 REM **** P0 COLOURS ****
+10070 DATA 52,14
+10080 REM **** P1 COLOURS ****
+10090 DATA 136,136
+10100 REM **** P0 DATA ****
+10110 REM **** FRAME 1
+10120 DATA 0,0,0,0,24,24,24,24
+10130 DATA 36,102,60,60,60,60,24,0
+10140 REM **** FRAME 2
+10150 DATA 0,0,0,24,0,0,0,36
+10160 DATA 24,0,0,0,66,66,102,0
+10170 REM **** P1 DATA ****
+10180 REM **** FRAME 1
+10190 DATA 0,90,126,102,36,36,24,24
+10200 DATA 0,24,66,126,0,0,0,60
+10210 REM **** FRAME 2
+10220 DATA 0,0,0,0,0,0,0,0
+10230 DATA 0,0,0,0,0,0,0,0
+
+For BASIC programmers (2):
+
+10000 REM **** FRAMES ****
+10010 DATA 2
+10020 REM **** HEIGHT ****
+10030 DATA 16
+10040 REM **** GAP ****
+10050 DATA 0
+10060 REM **** FRAME 1 COLOURS (P0, P1) ****
+10070 DATA 52,136
+10080 REM **** FRAME 2 COLOURS (P0, P1) ****
+10090 DATA 14,136
+10100 REM **** FRAME 1 ****
+10110 REM **** P0 DATA
+10120 DATA 0,0,0,0,24,24,24,24
+10130 DATA 36,102,60,60,60,60,24,0
+10140 REM **** P1 DATA
+10150 DATA 0,90,126,102,36,36,24,24
+10160 DATA 0,24,66,126,0,0,0,60
+10170 REM **** FRAME 2 ****
+10180 REM **** P0 DATA
+10190 DATA 0,0,0,24,0,0,0,36
+10200 DATA 24,0,0,0,66,66,102,0
+10210 REM **** P1 DATA
+10220 DATA 0,0,0,0,0,0,0,0
+10230 DATA 0,0,0,0,0,0,0,0
+
+For Assembler programmers:
+
+FRAMES:
+ .BYTE 2
+HEIGHT:
+ .BYTE 16
+GAP:
+ .BYTE 0
+P0COLOURS:
+ .BYTE $34,$0e
+P1COLOURS:
+ .BYTE $88,$88
+P0DATA:
+; FRAME 1
+ .BYTE $00,$00,$00,$00,$18,$18,$18,$18
+ .BYTE $24,$66,$3c,$3c,$3c,$3c,$18,$00
+; FRAME 2
+ .BYTE $00,$00,$00,$18,$00,$00,$00,$24
+ .BYTE $18,$00,$00,$00,$42,$42,$66,$00
+P1DATA:
+; FRAME 1
+ .BYTE $00,$5a,$7e,$66,$24,$24,$18,$18
+ .BYTE $00,$18,$42,$7e,$00,$00,$00,$3c
+; FRAME 2
+ .BYTE $00,$00,$00,$00,$00,$00,$00,$00
+ .BYTE $00,$00,$00,$00,$00,$00,$00,$00
+
+For FASTBASIC programmers:
+
+' frames = 2
+' height = 16
+' gap    = 0
+
+data Colour0() byte = 52,14
+
+data Colour1() byte = 136,136
+
+data Player0() byte = 0,0,0,0,24,24,24,24,
+data           byte = 36,102,60,60,60,60,24,0,
+data           byte = 0,0,0,24,0,0,0,36,
+data           byte = 24,0,0,0,66,66,102,0
+
+data Player1() byte = 0,90,126,102,36,36,24,24,
+data           byte = 0,24,66,126,0,0,0,60,
+data           byte = 0,0,0,0,0,0,0,0,
+data           byte = 0,0,0,0,0,0,0,0
+

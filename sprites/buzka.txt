@@ -1,0 +1,203 @@
+For C programmers:
+
+#define FRAMES (4)
+#define HEIGHT (16)
+#define GAP    (0)
+const unsigned char P0COLOURS[FRAMES] =
+{
+  0x14, 0x14, 0x14, 0x14
+};
+const unsigned char P1COLOURS[FRAMES] =
+{
+  0x18, 0x18, 0x18, 0x18
+};
+const unsigned char P0DATA[FRAMES][HEIGHT] =
+{
+  {
+    0x38, 0x44, 0x00, 0xee, 0x6c, 0x6c, 0x6c, 0x00, 
+    0x00, 0x44, 0x7c, 0x38, 0x82, 0x7c, 0x7c, 0x38
+  },
+  {
+    0x38, 0x7c, 0x7c, 0x92, 0xfe, 0x6c, 0x6c, 0x00, 
+    0x00, 0x38, 0x7c, 0x44, 0x82, 0x00, 0x44, 0x38
+  },
+  {
+    0x38, 0x44, 0x00, 0xee, 0x58, 0xda, 0xfe, 0xfe, 
+    0xfe, 0x44, 0x7c, 0x38, 0x82, 0x00, 0x44, 0x38
+  },
+  {
+    0x38, 0x44, 0x00, 0xee, 0x6c, 0x6c, 0x6c, 0x00, 
+    0x00, 0xfe, 0xfe, 0xee, 0xfe, 0x00, 0x44, 0x38
+  }
+};
+const unsigned char P1DATA[FRAMES][HEIGHT] =
+{
+  {
+    0x38, 0x7c, 0x7c, 0x92, 0xfe, 0xb6, 0xb6, 0xfe,
+    0xfe, 0xfe, 0xfe, 0xee, 0xfe, 0x00, 0x44, 0x38
+  },
+  {
+    0x38, 0x44, 0x00, 0x82, 0x6c, 0xda, 0xda, 0xfe,
+    0xfe, 0xfe, 0xee, 0xfe, 0xfe, 0x7c, 0x7c, 0x38
+  },
+  {
+    0x38, 0x7c, 0x7c, 0x92, 0xca, 0x48, 0x6c, 0x00,
+    0x00, 0xfe, 0xfe, 0xee, 0xfe, 0x7c, 0x7c, 0x38
+  },
+  {
+    0x38, 0x7c, 0x7c, 0x92, 0xb6, 0xb6, 0xfe, 0xfe,
+    0xfe, 0x44, 0x7c, 0x28, 0x82, 0x7c, 0x7c, 0x38
+  }
+};
+
+For BASIC programmers:
+
+10000 REM **** FRAMES ****
+10010 DATA 4
+10020 REM **** HEIGHT ****
+10030 DATA 16
+10040 REM **** GAP ****
+10050 DATA 0
+10060 REM **** P0 COLOURS ****
+10070 DATA 20,20,20,20
+10080 REM **** P1 COLOURS ****
+10090 DATA 24,24,24,24
+10100 REM **** P0 DATA ****
+10110 REM **** FRAME 1
+10120 DATA 56,68,0,238,108,108,108,0
+10130 DATA 0,68,124,56,130,124,124,56
+10140 REM **** FRAME 2
+10150 DATA 56,124,124,146,254,108,108,0
+10160 DATA 0,56,124,68,130,0,68,56
+10170 REM **** FRAME 3
+10180 DATA 56,68,0,238,88,218,254,254
+10190 DATA 254,68,124,56,130,0,68,56
+10200 REM **** FRAME 4
+10210 DATA 56,68,0,238,108,108,108,0
+10220 DATA 0,254,254,238,254,0,68,56
+10230 REM **** P1 DATA ****
+10240 REM **** FRAME 1
+10250 DATA 56,124,124,146,254,182,182,254
+10260 DATA 254,254,254,238,254,0,68,56
+10270 REM **** FRAME 2
+10280 DATA 56,68,0,130,108,218,218,254
+10290 DATA 254,254,238,254,254,124,124,56
+10300 REM **** FRAME 3
+10310 DATA 56,124,124,146,202,72,108,0
+10320 DATA 0,254,254,238,254,124,124,56
+10330 REM **** FRAME 4
+10340 DATA 56,124,124,146,182,182,254,254
+10350 DATA 254,68,124,40,130,124,124,56
+
+For BASIC programmers (2):
+
+10000 REM **** FRAMES ****
+10010 DATA 4
+10020 REM **** HEIGHT ****
+10030 DATA 16
+10040 REM **** GAP ****
+10050 DATA 0
+10060 REM **** FRAME 1 COLOURS (P0, P1) ****
+10070 DATA 20,24
+10080 REM **** FRAME 2 COLOURS (P0, P1) ****
+10090 DATA 20,24
+10100 REM **** FRAME 3 COLOURS (P0, P1) ****
+10110 DATA 20,24
+10120 REM **** FRAME 4 COLOURS (P0, P1) ****
+10130 DATA 20,24
+10140 REM **** FRAME 1 ****
+10150 REM **** P0 DATA
+10160 DATA 56,68,0,238,108,108,108,0
+10170 DATA 0,68,124,56,130,124,124,56
+10180 REM **** P1 DATA
+10190 DATA 56,124,124,146,254,182,182,254
+10200 DATA 254,254,254,238,254,0,68,56
+10210 REM **** FRAME 2 ****
+10220 REM **** P0 DATA
+10230 DATA 56,124,124,146,254,108,108,0
+10240 DATA 0,56,124,68,130,0,68,56
+10250 REM **** P1 DATA
+10260 DATA 56,68,0,130,108,218,218,254
+10270 DATA 254,254,238,254,254,124,124,56
+10280 REM **** FRAME 3 ****
+10290 REM **** P0 DATA
+10300 DATA 56,68,0,238,88,218,254,254
+10310 DATA 254,68,124,56,130,0,68,56
+10320 REM **** P1 DATA
+10330 DATA 56,124,124,146,202,72,108,0
+10340 DATA 0,254,254,238,254,124,124,56
+10350 REM **** FRAME 4 ****
+10360 REM **** P0 DATA
+10370 DATA 56,68,0,238,108,108,108,0
+10380 DATA 0,254,254,238,254,0,68,56
+10390 REM **** P1 DATA
+10400 DATA 56,124,124,146,182,182,254,254
+10410 DATA 254,68,124,40,130,124,124,56
+
+For Assembler programmers:
+
+FRAMES:
+ .BYTE 4
+HEIGHT:
+ .BYTE 16
+GAP:
+ .BYTE 0
+P0COLOURS:
+ .BYTE $14,$14,$14,$14
+P1COLOURS:
+ .BYTE $18,$18,$18,$18
+P0DATA:
+; FRAME 1
+ .BYTE $38,$44,$00,$ee,$6c,$6c,$6c,$00
+ .BYTE $00,$44,$7c,$38,$82,$7c,$7c,$38
+; FRAME 2
+ .BYTE $38,$7c,$7c,$92,$fe,$6c,$6c,$00
+ .BYTE $00,$38,$7c,$44,$82,$00,$44,$38
+; FRAME 3
+ .BYTE $38,$44,$00,$ee,$58,$da,$fe,$fe
+ .BYTE $fe,$44,$7c,$38,$82,$00,$44,$38
+; FRAME 4
+ .BYTE $38,$44,$00,$ee,$6c,$6c,$6c,$00
+ .BYTE $00,$fe,$fe,$ee,$fe,$00,$44,$38
+P1DATA:
+; FRAME 1
+ .BYTE $38,$7c,$7c,$92,$fe,$b6,$b6,$fe
+ .BYTE $fe,$fe,$fe,$ee,$fe,$00,$44,$38
+; FRAME 2
+ .BYTE $38,$44,$00,$82,$6c,$da,$da,$fe
+ .BYTE $fe,$fe,$ee,$fe,$fe,$7c,$7c,$38
+; FRAME 3
+ .BYTE $38,$7c,$7c,$92,$ca,$48,$6c,$00
+ .BYTE $00,$fe,$fe,$ee,$fe,$7c,$7c,$38
+; FRAME 4
+ .BYTE $38,$7c,$7c,$92,$b6,$b6,$fe,$fe
+ .BYTE $fe,$44,$7c,$28,$82,$7c,$7c,$38
+
+For FASTBASIC programmers:
+
+' frames = 4
+' height = 16
+' gap    = 0
+
+data Colour0() byte = 20,20,20,20
+
+data Colour1() byte = 24,24,24,24
+
+data Player0() byte = 56,68,0,238,108,108,108,0,
+data           byte = 0,68,124,56,130,124,124,56,
+data           byte = 56,124,124,146,254,108,108,0,
+data           byte = 0,56,124,68,130,0,68,56,
+data           byte = 56,68,0,238,88,218,254,254,
+data           byte = 254,68,124,56,130,0,68,56,
+data           byte = 56,68,0,238,108,108,108,0,
+data           byte = 0,254,254,238,254,0,68,56
+
+data Player1() byte = 56,124,124,146,254,182,182,254,
+data           byte = 254,254,254,238,254,0,68,56,
+data           byte = 56,68,0,130,108,218,218,254,
+data           byte = 254,254,238,254,254,124,124,56,
+data           byte = 56,124,124,146,202,72,108,0,
+data           byte = 0,254,254,238,254,124,124,56,
+data           byte = 56,124,124,146,182,182,254,254,
+data           byte = 254,68,124,40,130,124,124,56
+
